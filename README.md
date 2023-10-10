@@ -3,9 +3,9 @@ Chess AI
 
 ## Download the repository:
 <pre>
-```
-git clone git@github.com:Dirk94/ChessAI.git
-```
+
+git clone git@github.com:Binhdn04/chess-nhom-6.git
+
 </pre>
 
 ## Run the program and start playing chess!
