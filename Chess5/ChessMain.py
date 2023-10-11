@@ -15,7 +15,7 @@ DIMENSION = 8#số ô cho mỗi hàng, mỗi mỗi cột
 SQUARE_SIZE = BOARD_HEIGHT // DIMENSION#kích thước mỗi ô
 MAX_FPS = 15#số khung hình tối đa
 IMAGES = {}#Lưu trữ hình ảnh
-
+meme=p.transform.scale(p.image.load("images/meme.png"), (200, 150))
 
 def loadImages():
     """
@@ -111,6 +111,8 @@ def main():
                         move_finder_process.terminate()
                         ai_thinking = False
                     move_undone = True
+                if e.key==p.K_y:
+                    DrawMeme(screen,clock)
 
         # AI tìm kiếm nước đi
         if not game_over and not human_turn and not move_undone:#nếu game ko kết thúc và đến lượt của AI
@@ -282,6 +284,10 @@ def animateMove(move, screen, board, clock):
         p.display.flip()
         clock.tick(60)
 
+def DrawMeme(screen,clock):
+    screen.blit(meme,p.Rect(9 * SQUARE_SIZE, 4 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+    p.display.flip()
+    clock.tick(2)
 
 if __name__ == "__main__":
     main()
